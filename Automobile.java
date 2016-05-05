@@ -10,7 +10,7 @@ public class Automobile {
     private int opcycle;
     private int currentgear;
     private int currentspeed;
-    private int distance;
+    private double distance;
     
     public void setYear(int y){
         year = y;
@@ -61,7 +61,7 @@ public class Automobile {
     public double getDistanceTraveled (){
         int i = 0;
         while (i < opcycle) {
-            distance = distance + ((currentspeed)/60);
+            distance = distance + (((double)currentspeed)/60);
             i++;
         }
         return distance;
@@ -75,9 +75,6 @@ public class Automobile {
         about = about + ("\nTransmission = " + gears + " gears");
         about = about + ("\nColor = " + color + "\n");
         return about;
-    }   
-    
-            
-    
+    }  
     
 }
